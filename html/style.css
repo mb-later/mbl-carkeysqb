@@ -1,0 +1,129 @@
+body{
+  background-color: none;
+}
+.table{
+  position:relative;
+  display: none;
+  width: 99vw;
+  height: auto;
+  top: 75vh;
+
+}
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.plate {
+  color: white;
+  position:relative;
+  left:10%;
+  bottom: 14%;
+  background: none;
+  font-weight: bold;
+}
+.key{
+  background-color: #101111;
+  width: 120px;
+  height: 220px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 12px;
+  text-align: left;
+  position: relative;
+}
+
+.key > div{
+  background-color: #232020;
+  height: calc(100% - 40px);
+  margin-top: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.key > div > span{
+  display: block;
+  flex: 1;
+  text-align: center;
+  padding: 11px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.key > div > span:not(:first-child){
+  border-top: 1px solid black;
+}
+button{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+button:hover{
+  background-color: white;
+}
+.key > em{
+  display: block;
+  position: absolute;
+  width: 13px;
+  height: 120px;
+  left: 50px;
+  background-color: white;
+  top: 10px;
+  transform-origin: top;
+  transition: all .3s;
+  z-index: -1;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.key > em.active{
+  -ms-transform: rotateZ(180deg); /* IE 9 */
+  -webkit-transform: rotateZ(180deg); /* Chrome, Safari, Opera */
+  transform: rotateZ(180deg);
+}
+.arc{
+  width: 80px;
+  height: 12px;
+  margin: auto;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 6px solid white;
+  border-top: none;
+}
+.key > ul{
+  position: absolute;
+  top: -100px;
+  right: -40px;
+  list-style: none;
+  display: block;
+  -ms-transform: rotateZ(15deg); /* IE 9 */
+  -webkit-transform: rotateZ(15deg); /* Chrome, Safari, Opera */
+  transform: rotateZ(15deg);
+}
+.key > ul li{
+  display: block;
+  margin: 2px;
+  border-radius: 50%;
+  border:none;
+  border-top: 4px solid transparent;
+  -ms-transform: rotateZ(10deg); /* IE 9 */
+  -webkit-transform: rotateZ(10deg); /* Chrome, Safari, Opera */
+  transform: rotateZ(10deg);
+}
+.key > ul li:nth-child(1){          
+  width: 40px;
+  height: 40px;
+}
+.key > ul li:nth-child(2){          
+  width: 30px;
+  height: 30px;
+}
+.key > ul li:nth-child(3){          
+  width: 20px;
+  height: 20px;
+}
+.key > ul li.active{
+  border-color: white;
+}
